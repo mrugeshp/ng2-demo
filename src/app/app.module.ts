@@ -3,7 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule, MdNativeDateModule } from '@angular/material';
+import {MaterialModule, MdNativeDateModule} from '@angular/material';
+
 import { FirstService } from './first.service';
 
 import { AppComponent } from './app.component';
@@ -33,10 +34,10 @@ import { FormMaterialComponent } from './form-material/form-material.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule,
-    MdNativeDateModule,
+    BrowserAnimationsModule,
     HttpModule,
-    BrowserAnimationsModule
+    MaterialModule,
+    MdNativeDateModule
   ],
   providers: [FirstService],
   bootstrap: [AppComponent]
