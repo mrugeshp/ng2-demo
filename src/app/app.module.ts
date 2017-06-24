@@ -13,14 +13,15 @@ import { SubcompComponent } from './subcomp/subcomp.component';
 import { Comp3Component } from './comp3/comp3.component';
 import { JunethreeComponent } from './junethree/junethree.component';
 import { MaincompComponent } from './maincomp/maincomp.component';
-import { JunefourComponent } from './junefour/junefour.component';
+import { JunefourComponent, myFirstDir, TrackingService } from './junefour/junefour.component';
 import { FormDemoComponent } from './form-demo/form-demo.component';
 import { FormMaterialComponent } from './form-material/form-material.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
+    myFirstDir,
     TestcompComponent,
     SubcompComponent,
     Comp3Component,
@@ -39,7 +40,7 @@ import { FormMaterialComponent } from './form-material/form-material.component';
     MaterialModule,
     MdNativeDateModule
   ],
-  providers: [FirstService],
+  providers: [FirstService, TrackingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

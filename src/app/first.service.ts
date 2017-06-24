@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, RequestOptions, Response, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -27,6 +27,23 @@ export class FirstService {
   getBlogs(userId) {
     console.log('user id '+ userId);
     return this.http.get('https://jsonplaceholder.typicode.com/posts?userId='+userId).map(res => res.json());
+  }
+
+  makePut(player): any {
+    let headers: Headers = new Headers({ 'Content-type': 'application/jsong'} );
+
+    let opts: RequestOptions = new RequestOptions();
+        opts.headers = headers;
+/*
+    this.http.put(
+      'http://localhost:3000/players/'+ player.id,
+      JSON.stringify(player),
+      opts)
+      .subscribe((res: Response) => {
+        this.data = res.json();
+      });
+      )
+      return this.data;*/
   }
 
 }

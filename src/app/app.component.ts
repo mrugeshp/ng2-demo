@@ -10,7 +10,7 @@ export class Person {
 @Component({
   selector: 'app-root',
   template: `
-      <app-form-material></app-form-material>
+      <app-junefour></app-junefour>
    `,
   styleUrls: ['./app.component.css']
 })
