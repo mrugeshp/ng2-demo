@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { FirstService } from './first.service';
 
 export class Person {
@@ -10,15 +10,27 @@ export class Person {
 @Component({
   selector: 'app-root',
   template: `
-      <app-junefour></app-junefour>
+      <app-junefour></app-junefour>.
+
+      <p>Date 24/06/2017 Code</p>
+
+      <ng-template #myTemplate>
+        Template contents...
+      </ng-template>
+
    `,
   styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
-  
-  constructor() {
+  @ViewChild('myTemplate') myTemplate;
+
+  constructor(private view : ViewContainerRef) {
    
+  }
+
+  ngOnInit() {
+    this.view.createEmbeddedView(this.myTemplate);
   }
 
   /**
